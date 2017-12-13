@@ -26,6 +26,14 @@ public class login {
                JOptionPane.showMessageDialog(null,username+" System not reply yet");
             }
         });
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String username = userField.getText();
+                String pw = String.valueOf(pwField.getPassword());
+                loginCheck(username,pw);
+            }
+        });
     }
 
     public static void main(String[] args){
@@ -38,10 +46,10 @@ public class login {
     private void loginCheck(String frUserName, String frPW){
         String inUsername = "COSC";
         String inPW = "22035";
-        if(frUserName.equals(inUsername)&&frPW.equals(inPW))
-            JOptionPane.showMessageDialog(null,"Username and Password correct");
+        if(frUserName.equals(inUsername)&&frPW.equals(inPW)) {
+            JOptionPane.showMessageDialog(null, "Username and Password correct");
             LoginJF.setVisible(false);
-
+        }
         else
             JOptionPane.showMessageDialog(null,"incorrect");
     }
