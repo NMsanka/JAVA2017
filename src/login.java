@@ -40,6 +40,8 @@ public class login {
         String inPW = "22035";
         if(frUserName.equals(inUsername)&&frPW.equals(inPW))
             JOptionPane.showMessageDialog(null,"Username and Password correct");
+            LoginJF.setVisible(false);
+
         else
             JOptionPane.showMessageDialog(null,"incorrect");
     }
